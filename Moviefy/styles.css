@@ -1,0 +1,20 @@
+.container.colorme {
+    background-color: rgba(46, 3, 3, 0.8);    
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+body {
+    background-image: url(http://www.wallpaperawesome.com/wallpapers-awesome/wallpapers-people-men-women-child-baby-awesome/wallpaper-cinema-3d.jpg);
+}
+
+.movie-layout {
+    background-color: rgba(124, 118, 118, 0.8);
+    margin: 20px;
+    border-radius: 10px;    
+    padding: 20px;
+}
+
+.inline-block {
+    display: inline-block;
+}
