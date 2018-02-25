@@ -13,7 +13,10 @@ var movieLayoutProvider = function(movie) {
                         <div style="display:inline-block;top:0;width:65%;vertical-align:top;margin:0 auto">
                             <h1 style="text-align:center">${movie.Title}</h1>
                             <p style="text-align:center"><b>Year:</b> ${movie.Year}<p>
-                            <p style="text-align:center"><b>Type:</b> ${movie.Type}<p>\
+                            <p style="text-align:center"><b>Genre:</b> ${movie.Genre}<p>
+                            <p style="text-align:center"><b>Director:</b> ${movie.Director}<p>
+                            <p style="text-align:center"><b>Plot:</b> ${movie.Plot}<p>
+                            <p style="text-align:center"><b>Awards:</b> ${movie.Awards}<p>                            
                         </div>
                     </div>`;
         }
