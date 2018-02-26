@@ -9,9 +9,9 @@ $(document).ready(function(){
         
         $(this).parent().addClass("active");
     })
-})
 
-$(document).ready(function(){
+
+
     $("#favourite-a").click(function(){
         $("#main-container").html("");
         $("#home-a").parent().removeClass("active");
@@ -20,9 +20,9 @@ $(document).ready(function(){
         
         $(this).parent().addClass("active");
     })
-})
 
-$(document).ready(function(){
+
+
     $("#cinemas-a").click(function(){
         $("#main-container").html("");
         $("#home-a").parent().removeClass("active");
@@ -31,9 +31,9 @@ $(document).ready(function(){
         
         $(this).parent().addClass("active");
     })
-})
 
-$(document).ready(function(){
+
+
     $("#home-a").click(function(){
         var html = homeLayoutProvider().html;
         $("#main-container").html(html);
@@ -43,9 +43,9 @@ $(document).ready(function(){
         
         $(this).parent().addClass("active");
     })
-})
 
-$(document).ready(function(){
+
+
     $("#search-btn").click(function(){
         var html = searchBarLayoutProvider().html;
         $("#main-container").html(html);
