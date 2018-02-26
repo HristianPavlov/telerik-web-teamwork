@@ -18,3 +18,23 @@ body {
 .inline-block {
     display: inline-block;
 }
+
+#inline{
+    overflow:hidden;
+}
+#adv-search{
+    float: left;
+}
+#favorite{
+    margin: 13px;
+    float: left;
+}
+p.fav-btn{
+    color: white;
+}
+p.fav-btn:hover, .fav-btn:active{
+    color: blue;
+}
+#add-to-fav{
+    float: right;
+}

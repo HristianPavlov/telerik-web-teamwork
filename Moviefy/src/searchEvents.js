@@ -14,9 +14,10 @@ $(document).ready(function(){
 });
 
 var searchFunction = function(data) {
-    var inputString = $("#input1").val();         
+    var inputString = $("#input1").val();
+    var yearInput = $("#yearInput").val();     
     var searchString = encodeURIComponent(inputString.trim(' '));
-    var url = `http://www.omdbapi.com/?s=${searchString}&apikey=50091ff1`;
+    var url = `http://www.omdbapi.com/?s=${searchString}&y=${yearInput}&apikey=50091ff1`;
     $('#div1').html(""); //clear layout tag
 
     $.get(url, function(data){
