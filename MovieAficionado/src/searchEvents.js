@@ -1,15 +1,3 @@
-$(document).on("click", "#go-btn", function () {
-    searchFunction();
-});
-
-$(document).on("keyup", "#search-input", function (e) {
-    $("#search-input").bind("enterKey", searchFunction);
-    if (e.keyCode == 13 && $(this).val() !== "") // enter key code
-    {
-        $(this).trigger("enterKey");
-    }
-});
-
 var searchFunction = function (data) {
     var inputString = $("#search-input").val();
     var searchString = encodeURIComponent(inputString.trim(' '));
@@ -35,3 +23,14 @@ var searchFunction = function (data) {
         }
     });
 }
+
+$(document).on("click", "#go-btn", searchFunction);
+$(document).on("enterKey", "#search-input", searchFunction);
+
+$(document).on("keyup", "#search-input", function (e) {
+    var srchInput = $("#search-input");
+    if (e.keyCode == 13 && srchInput.val() !== "") // enter key code
+    {
+        srchInput.trigger("enterKey");
+    }
+});

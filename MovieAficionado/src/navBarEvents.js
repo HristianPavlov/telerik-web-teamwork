@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $("#main-container").html(homeLayoutProvider().html);
+    
     $("#newest-a").click(function(){
         $('#results').html("");
         var html = carouselLayoutProvider().html;
@@ -8,10 +10,11 @@ $(document).ready(function(){
         $("#cinemas-a").parent().removeClass("active");
         
         $(this).parent().addClass("active");
+        $('#results').html("");
     })
-})
 
-$(document).ready(function(){
+
+
     $("#favourite-a").click(function(){
         $('#results').html("");
         $("#main-container").html("");
@@ -20,10 +23,11 @@ $(document).ready(function(){
         $("#cinemas-a").parent().removeClass("active");
         
         $(this).parent().addClass("active");
+        $('#results').html("");
     })
-})
 
-$(document).ready(function(){
+
+
     $("#cinemas-a").click(function(){
         $('#results').html("");
         $("#main-container").html("");
@@ -32,10 +36,11 @@ $(document).ready(function(){
         $("#newest-a").parent().removeClass("active");
         
         $(this).parent().addClass("active");
+        $('#results').html("");
     })
-})
 
-$(document).ready(function(){
+
+
     $("#home-a").click(function(){
         $('#results').html("");
         var html = homeLayoutProvider().html;
@@ -45,10 +50,11 @@ $(document).ready(function(){
         $("#cinemas-a").parent().removeClass("active");
         
         $(this).parent().addClass("active");
+        $('#results').html("");
     })
-})
 
-$(document).ready(function(){
+
+
     $("#search-btn").click(function(){
         $('#results').html("");
         var html = searchBarLayoutProvider().html;
@@ -58,5 +64,6 @@ $(document).ready(function(){
         $("#cinemas-a").parent().removeClass("active");       
         $("#home-a").parent().removeClass("active");
         
+        $('#results').html("");
     })
 })
