@@ -23,10 +23,10 @@ var searchFunction = function (data) {
             for (let i = 0; i < movies.length; i++) {
                 const movieId = movies[i].imdbID;
                 const newUrl = `http://www.omdbapi.com/?i=${movieId}&apikey=50091ff1`;
-                console.log(movieId);
+                //console.log(movieId);
 
                 $.get(newUrl, function (movie) {
-                    $("#results").append(movieLayoutProvider(movie).html());
+                    $("#results").append(movieLayoutProvider(movie, movieId).html());
                 });
             }
 

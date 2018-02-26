@@ -17,3 +17,8 @@ var posterDataBase = function(){
         ]
     }
 }
+
+var favoritesDataBase = (function(){
+    return{ ids: ["tt0800369",  "tt1981115", "tt3501632", "tt0113253" ]  
+}
+})();

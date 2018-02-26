@@ -1,4 +1,4 @@
-var movieLayoutProvider = function(movie, movieid) {
+var movieLayoutProviderFav = function(movie, movieid) {
     var poster = movie.Poster;
 
     if (poster == "N/A") {
@@ -18,12 +18,10 @@ var movieLayoutProvider = function(movie, movieid) {
                             <p style="text-align:center"><b>Plot:</b> ${movie.Plot}<p>
                             <p style="text-align:center"><b>Awards:</b> ${movie.Awards}<p>                            
                         </div>
-                        <div id="add-to-fav">
-                            <button id="add-btn" class="btn btn-danger ${movieid}">Add to Favorites</button>
+                        <div id="remove-from-fav">
+                            <button id="remove-btn" class="btn btn-danger ${movieid}">Remove from Favorites</button>
                         </div> 
                     </div>`;
         }
     }
 };
-
-
