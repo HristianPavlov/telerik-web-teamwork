@@ -1,4 +1,8 @@
-var carouselLayoutProvider = function () {
+var carouselLayoutProvider = function () {  
+    var img1 = posterDataBase().movies[0];
+    var img2 = posterDataBase().movies[1];
+    var img3 = posterDataBase().movies[2];
+    var img4 = posterDataBase().movies[3];
     return {
         html: `
         <br> 
@@ -16,13 +20,13 @@ var carouselLayoutProvider = function () {
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://www.w3schools.com/bootstrap4/la.jpg" alt="Los Angeles" width="1100" height="500">
+                        <img src="${img1}" alt="Los Angeles" width="1100" height="500">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://www.w3schools.com/bootstrap4/chicago.jpg" alt="Chicago" width="1100" height="500">
+                        <img src="${img4}" alt="Chicago" width="1100" height="500">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://www.w3schools.com/bootstrap4/ny.jpg" alt="New York" width="1100" height="500">
+                        <img src="${img3}" alt="New York" width="1100" height="500">
                     </div>
                 </div>
 
