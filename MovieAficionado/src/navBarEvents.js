@@ -10,6 +10,7 @@ $(document).ready(function(){
         $("#cinemas-a").parent().removeClass("active");
         
         $(this).parent().addClass("active");
+        $('#results').html("");
     })
 
 
@@ -21,6 +22,7 @@ $(document).ready(function(){
         $("#cinemas-a").parent().removeClass("active");
         
         $(this).parent().addClass("active");
+        $('#results').html("");
     })
 
 
@@ -32,6 +34,7 @@ $(document).ready(function(){
         $("#newest-a").parent().removeClass("active");
         
         $(this).parent().addClass("active");
+        $('#results').html("");
     })
 
 
@@ -44,6 +47,7 @@ $(document).ready(function(){
         $("#cinemas-a").parent().removeClass("active");
         
         $(this).parent().addClass("active");
+        $('#results').html("");
     })
 
 
@@ -56,5 +60,6 @@ $(document).ready(function(){
         $("#cinemas-a").parent().removeClass("active");       
         $("#home-a").parent().removeClass("active");
         
+        $('#results').html("");
     })
 })
