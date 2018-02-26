@@ -53,5 +53,6 @@ $(document).ready(function(){
         $("#favourite-a").parent().removeClass("active");
         $("#cinemas-a").parent().removeClass("active");       
         $("#home-a").parent().removeClass("active");
+        
     })
 })

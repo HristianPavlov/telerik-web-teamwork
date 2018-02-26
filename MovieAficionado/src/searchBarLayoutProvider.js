@@ -3,9 +3,9 @@ var searchBarLayoutProvider = function() {
         html : `    <div class="row">
         <div class="col-md-8 offset-2">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input id="search-input" type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
+                  <button id="go-btn" class="btn btn-secondary" type="button">Go!</button>
                 </span>
               </div>
         </div>
