@@ -26,19 +26,19 @@
     <script src="src/carouselLayoutProvider.js"></script>
     <script src="src/searchBarLayoutProvider.js"></script>
     <script src="src/searchEvents.js"></script>
-    <script src="src/movieLayoutProvider.js"></script> 
+    <script src="src/movieLayoutProvider.js"></script>
     <script src="src/database.js"></script>
     <script src="src/addBtnEvent.js"></script>
     <script src="src/favBtnEvent.js"></script>
     <script src="src/favouritesLayoutProvider.js"></script>
     <script src="src/removeBtnEvent.js"></script>
-    
+
 
     <title>Hello, world!</title>
 </head>
 
 <body>
-    
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -52,8 +52,15 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="newest-a">Newest</a>
+                <li class="nav-item dropdown">
+                    <a id="newest-a" class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <span class="badge badge-primary">new</span>Newest
+                    </a>
+                    <div class="dropdown-menu">
+                        <a id="newest-m" class="dropdown-item" href="#">Movies</a>
+                        <a id="newest-s" class="dropdown-item" href="#">TV Shows</a>
+                        <a id="newest-g" class="dropdown-item" href="#">Games</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" id="favourite-a">Favourites</a>
@@ -63,16 +70,37 @@
                 </li>
             </ul>
             <div class="form-inline my-2 my-lg-0">
-                
+
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
             </div>
         </div>
     </nav>
 
-    <br>    
-    <div class="container" id="main-container"></div>
     <br>
-    <div id="results" class="container"></div>
+    <div class="container" id="main-container"></div>
+
+    <!-- <div class="container">
+        <table class="table table-striped table-light align-center">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-f">
+                <tr>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-danger">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
 
 </body>
 

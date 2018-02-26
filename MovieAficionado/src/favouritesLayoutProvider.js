@@ -1,27 +1,36 @@
-var movieLayoutProviderFav = function(movie, movieid) {
-    var poster = movie.Poster;
+var favouriteMoviesLayoutProvider = function () {
+    var moviesTableLayoutProvider = function (movie) {
+        return {
+            html: `<tr>
+                        <td>${movie.Title}</td>
+                        <td>${movie.Genre}</td>
+                        <td>${movie.Year}</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-danger rmv-btn">Remove</button>
+                        </td>
+                    </tr>`
+        };
+    };
 
-    if (poster == "N/A") {
-        poster = "http://www.daleng.ca/wp-content/themes/graduate-pro/assets/uploads/no-featured-image-400x600.jpg"
-    }
-
+    var favourites = favouritesDatabase().favourites;
+    var moviesTableLayout = favourites.map(movie => moviesTableLayoutProvider(movie).html);
+    var resultHtml = moviesTableLayout.join("");
 
     return {
-        html: function() {
-            return  `<div class="container movie-layout">       
-                        <img style="width:33%" src="${poster}"></img>
-                        <div style="display:inline-block;top:0;width:65%;vertical-align:top;margin:0 auto">
-                            <h1 style="text-align:center">${movie.Title}</h1>
-                            <p style="text-align:center"><b>Year:</b> ${movie.Year}<p>
-                            <p style="text-align:center"><b>Genre:</b> ${movie.Genre}<p>
-                            <p style="text-align:center"><b>Director:</b> ${movie.Director}<p>
-                            <p style="text-align:center"><b>Plot:</b> ${movie.Plot}<p>
-                            <p style="text-align:center"><b>Awards:</b> ${movie.Awards}<p>                            
-                        </div>
-                        <div id="remove-from-fav">
-                            <button id="remove-btn" class="btn btn-danger ${movieid}">Remove from Favorites</button>
-                        </div> 
-                    </div>`;
-        }
-    }
+        html:   `<div class="container">
+                    <table class="table table-striped table-light align-center">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Genre</th>
+                                <th>Year</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-f">
+                        ${resultHtml}
+                        </tbody>
+                    </table>
+                </div>`
+    };
 };
