@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $("#main-container").html(homeLayoutProvider().html);
+    
     $("#newest-a").click(function(){
         var html = carouselLayoutProvider().html;
 
