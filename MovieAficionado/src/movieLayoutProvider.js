@@ -13,7 +13,7 @@ var movieLayoutProvider = function (movie, movieId) {
     if (favourites[movieId])
     {
         buttonColor = "btn-outline-danger";
-        buttonMessage = "Already added";
+        buttonMessage = "Added";
         buttonAttr = "disabled";
     }
 
@@ -23,10 +23,10 @@ var movieLayoutProvider = function (movie, movieId) {
 
             return `<hr class="bg-success">
                     <div class="row">
-                        <div class="col-lg-4 offset-2 float-right">
+                        <div class="col-sm offset-1 float-right">
                             <img id="${movieId}-img" src="${poster}">
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm">
                             <h1 id="${movieId}-title" class="align-center">${movie.Title}</h1>
                             <div id="${movieId}-year" class="row">
                                 <b>Year: </b>
@@ -52,6 +52,8 @@ var movieLayoutProvider = function (movie, movieId) {
                             <div class="row float-right">
                                 <button id="${movieId}-add-btn" ${buttonAttr} type="button" class="btn ${buttonColor} add-btn">${buttonMessage}</button>
                             </div>
+                        </div>
+                        <div class="col-sm=1 offset-1 float-right">
                         </div>
                     </div>
                     <hr class="bg-success">`;
