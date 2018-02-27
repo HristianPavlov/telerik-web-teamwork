@@ -10,17 +10,17 @@ var posterDataBase = function () {
             },
             {
                 url: "https://www.quirkybyte.com/wp-content/uploads/2017/01/ironman.jpg",
-                title: 'Thor2'
+                title: 'Iron Man'
               
             },
             {
                 url: "http://www.indiewire.com/wp-content/uploads/2018/01/black-panther.jpg",
-                title: 'Thor3Fuckyouuuuuuu'
+                title: 'Black Panther'
               
             },
             {
                 url:  "https://espngrantland.files.wordpress.com/2012/08/white-men-cant-jump-features.jpeg?w=1920",
-                title: 'Halloween'
+                title: 'White men can not jump'
               
             }
 
