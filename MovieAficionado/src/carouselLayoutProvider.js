@@ -1,9 +1,9 @@
 var carouselLayoutProvider = function () {
       
-    var img1 = posterDataBase().movies[0];
-    var img2 = posterDataBase().movies[1];
-    var img3 = posterDataBase().movies[2];
-    var img4 = posterDataBase().movies[3];
+    var img1 = posterDataBase().movies[0].url;
+    var img2 = posterDataBase().movies[1].url;
+    var img3 = posterDataBase().movies[2].url;
+    var img4 = posterDataBase().movies[3].url;
 
     return {
         html:   `<div class="row">
