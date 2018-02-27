@@ -55,10 +55,11 @@ var favouritesDatabase = (function (){
     }
 
     var removeMovie = function(id) {
-        favourites.delete(id);
+        delete favourites[id];
     }
     return {
         favourites,
-        addMovie
+        addMovie,
+        removeMovie
     }
 }());

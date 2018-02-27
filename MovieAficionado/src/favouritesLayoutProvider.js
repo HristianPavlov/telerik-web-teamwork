@@ -1,19 +1,20 @@
 var favouriteMoviesLayoutProvider = function () {
-    var moviesTableLayoutProvider = function (movie) {
+    var moviesTableLayoutProvider = function (movie, movieId) {
         return {
             html: `<tr>
                         <td>${movie.Title}</td>
                         <td>${movie.Genre}</td>
                         <td>${movie.Year}</td>
                         <td>
-                            <button type="button" class="btn btn-outline-danger rmv-btn">Remove</button>
+                            <button id="${movieId}-rmv-btn" type="button" class="btn btn-outline-danger rmv-btn">Remove</button>
                         </td>
                     </tr>`
         };
     };
     
     var favourites = favouritesDatabase.favourites;
-    var moviesTableLayout = Object.values(favourites).map(movie => moviesTableLayoutProvider(movie).html);
+    var moviesTableLayout = Object.keys(favourites)
+        .map(key => moviesTableLayoutProvider(favourites[key], key).html);
     var resultHtml = moviesTableLayout.join("");
 
     return {
