@@ -58,17 +58,17 @@ $(document).ready(function(){
     })
 
     $("#newest-m").click(function(){
-        var html = carouselLayoutProvider().html;
+        var html = carouselLayoutProvider(`movies`).html;
         $("#main-container").html(html);
     });
 
     $("#newest-g").click(function(){
-        var html = carouselLayoutProvider().html;
+        var html = carouselLayoutProvider(`games`).html;
         $("#main-container").html(html);
     });
 
     $("#newest-s").click(function(){
-        var html = carouselLayoutProvider().html;
+        var html = carouselLayoutProvider(`series`).html;
         $("#main-container").html(html);
     });
 });
