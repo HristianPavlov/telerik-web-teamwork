@@ -1,10 +1,20 @@
-$(document).on("click", "#add-btn", function(){
-    var database = favouritesDatabase.ids;
-    var id = this.className.split(" ")[2];
-    if(database.indexOf(id) > -1){
+$(document).on("click", ".add-btn", function(){
+    var favourites = favouritesDatabase.favourites;;;;;;
+    var id = $(this).attr('id').split("-")[0];
+    if(favourites[id]){
         alert("Already in favourites!");
     }
     else{
-        database.push(id);
+        var title = $(`#${id}-title`).html();
+        var year = $(`#${id}-year`).html();
+        var genre = $(`#${id}-genre`).html();
+        favouritesDatabase.addMovie(
+            {
+                imdbID: id,
+                Title: title,
+                Year: year,
+                Genre: genre
+            }
+        )
     }
 })

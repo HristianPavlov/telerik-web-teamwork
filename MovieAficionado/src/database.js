@@ -51,7 +51,7 @@ var favouritesDatabase = (function (){
     };
 
     var addMovie = function(movie) {
-        favourites.set(movie.imdbID, {Title: movie.Title,Year: movie.Year, Genre: movie.Genre})
+        favourites[movie.imdbID] = {Title: movie.Title,Year: movie.Year, Genre: movie.Genre};
     }
 
     var removeMovie = function(id) {
