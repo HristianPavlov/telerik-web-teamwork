@@ -18,6 +18,7 @@ var movieLayoutProvider = function (movie, movieId) {
     }
 
     return {
+
         html: function () {
 
             return `<hr class="bg-success">
