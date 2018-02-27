@@ -13,5 +13,5 @@ $(document).on("click", ".rmv-btn",function(){
     //     });
     // }
 
-    $(".rmv-btn").parent().parent().addClass("hidden");
+    $(this).parent().parent().addClass("hidden");
 })
