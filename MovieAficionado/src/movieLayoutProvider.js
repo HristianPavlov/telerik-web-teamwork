@@ -1,27 +1,59 @@
-var movieLayoutProvider = function(movie, movieid) {
+var movieLayoutProvider = function (movie, movieId) {
     var poster = movie.Poster;
 
     if (poster == "N/A") {
         poster = "http://www.daleng.ca/wp-content/themes/graduate-pro/assets/uploads/no-featured-image-400x600.jpg"
     }
 
+    var favourites = favouritesDatabase.favourites;
+    var buttonColor = "btn-outline-success";
+    var buttonMessage = "Add to Favourites";
+    var buttonAttr = "";
+
+    if (favourites[movieId])
+    {
+        buttonColor = "btn-outline-danger";
+        buttonMessage = "Already added";
+        buttonAttr = "disabled";
+    }
 
     return {
-        html: function() {
-            return  `<div class="container movie-layout">       
-                        <img id="${movieid}-img" style="width:33%" src="${poster}"></img>
-                        <div style="display:inline-block;top:0;width:65%;vertical-align:top;margin:0 auto">
-                            <h1 id="${movieid}-title" style="text-align:center">${movie.Title}</h1>
-                            <p id="${movieid}-year"style="text-align:center"><b>Year:</b> ${movie.Year}<p>
-                            <p id="${movieid}-genre"style="text-align:center"><b>Genre:</b> ${movie.Genre}<p>
-                            <p style="text-align:center"><b>Director:</b> ${movie.Director}<p>
-                            <p style="text-align:center"><b>Plot:</b> ${movie.Plot}<p>
-                            <p style="text-align:center"><b>Awards:</b> ${movie.Awards}<p>                            
+        html: function () {
+
+            return `<hr class="bg-success">
+                    <div class="row">
+                        <div class="col-lg-4 offset-2 float-right">
+                            <img id="${movieId}-img" src="${poster}">
                         </div>
-                        <div id="add-to-fav">
-                            <button id="${movieid}-add-btn" class="btn btn-danger add-btn">Add to Favorites</button>
-                        </div> 
-                    </div>`;
+                        <div class="col-lg-4">
+                            <h1 id="${movieId}-title" class="align-center">${movie.Title}</h1>
+                            <div id="${movieId}-year" class="row">
+                                <b>Year: </b>
+                                <span>${movie.Year}</span>
+                            </div>
+                            <div id="${movieId}-genre" class="row">
+                                <b>Genre: </b>
+                                <span>${movie.Genre}</span>
+                            </div>
+                            <div class="row">
+                                <b>Director: </b>
+                                <span>${movie.Director}</span>
+                            </div>
+                            <div class="row">
+                                <b>Plot: </b>
+                                <span>${movie.Plot}</span>
+                            </div>
+                            <div class="row">
+                                <b>Awards: </b>
+                                <span>${movie.Awards}</span>
+                            </div>
+                            <br>
+                            <div class="row float-right">
+                                <button id="${movieId}-add-btn" ${buttonAttr} type="button" class="btn ${buttonColor} add-btn">${buttonMessage}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="bg-success">`;
         }
     }
 };

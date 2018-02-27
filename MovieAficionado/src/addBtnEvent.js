@@ -6,8 +6,8 @@ $(document).on("click", ".add-btn", function(){
     }
     else{
         var title = $(`#${id}-title`).html();
-        var year = $(`#${id}-year`).html();
-        var genre = $(`#${id}-genre`).html();
+        var year = $(`#${id}-year span`).html();
+        var genre = $(`#${id}-genre span`).html();
         favouritesDatabase.addMovie(
             {
                 imdbID: id,

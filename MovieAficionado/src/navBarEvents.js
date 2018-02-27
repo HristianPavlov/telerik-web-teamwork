@@ -61,4 +61,14 @@ $(document).ready(function(){
         var html = carouselLayoutProvider().html;
         $("#main-container").html(html);
     });
+
+    $("#newest-g").click(function(){
+        var html = carouselLayoutProvider().html;
+        $("#main-container").html(html);
+    });
+
+    $("#newest-s").click(function(){
+        var html = carouselLayoutProvider().html;
+        $("#main-container").html(html);
+    });
 });
