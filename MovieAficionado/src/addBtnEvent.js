@@ -5,9 +5,9 @@ $(document).on("click", ".add-btn", function(){
         alert("Already in favourites!");
     }
     else{
-        var title = $(`#${id}-title`).html();
-        var year = $(`#${id}-year`).html();
-        var genre = $(`#${id}-genre`).html();
+        var title = $(`#${id}-title span`).text();
+        var year = $(`#${id}-year span`).text();
+        var genre = $(`#${id}-genre span`).text();
         favouritesDatabase.addMovie(
             {
                 imdbID: id,
