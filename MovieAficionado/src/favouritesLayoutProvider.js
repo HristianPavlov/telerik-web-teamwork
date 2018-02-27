@@ -11,9 +11,9 @@ var favouriteMoviesLayoutProvider = function () {
                     </tr>`
         };
     };
-
-    var favourites = favouritesDatabase().favourites;
-    var moviesTableLayout = favourites.map(movie => moviesTableLayoutProvider(movie).html);
+    
+    var favourites = favouritesDatabase.favourites;
+    var moviesTableLayout = Object.values(favourites).map(movie => moviesTableLayoutProvider(movie).html);
     var resultHtml = moviesTableLayout.join("");
 
     return {

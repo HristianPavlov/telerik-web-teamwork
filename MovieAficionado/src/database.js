@@ -19,26 +19,29 @@ var posterDataBase = function () {
     }
 }
 
-var favouritesDatabase = function () {
-    var favourites = [
-        {
+var favouritesDatabase = (function (){
+    var favourites = {
+        "sdasda" :{
             Title: "Fucking",
             Year: "1999",
             Genre: "Action"
         },
-        {
+        "dsadas" :{
             Title: "Fucking v2",
             Year: "2001",
             Genre: "Drama"
         }
-    ]
+    };
 
     var addMovie = function(movie) {
-        favourites.push(movie);
+        favourites.set(movie.imdbID, {Title: movie.Title,Year: movie.Year, Genre: movie.Genre})
     }
 
+    var removeMovie = function(id) {
+        favourites.delete(id);
+    }
     return {
         favourites,
         addMovie
     }
-};
+}());
