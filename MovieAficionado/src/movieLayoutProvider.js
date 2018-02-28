@@ -27,7 +27,7 @@ var movieLayoutProvider = function (movie, movieId) {
                             <img id="${movieId}-img" src="${poster}">
                         </div>
                         <div class="col-sm">
-                            <h1 id="${movieId}-title" class="align-center">${movie.Title}</h1>
+                            <h1 id="${movieId}-title" class="text-center">${movie.Title}</h1>
                             <div id="${movieId}-year" class="row">
                                 <b>Year: </b>
                                 <span>${movie.Year}</span>

@@ -4,22 +4,6 @@
     height: 100%;
 }
 
-.align-center {
-  text-align: center;
-}
-
 .hidden {
   display: none;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.inline {
-  display: inline;
 }

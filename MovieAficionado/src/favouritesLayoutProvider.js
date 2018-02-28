@@ -19,7 +19,7 @@ var favouriteMoviesLayoutProvider = function () {
 
     return {
         html:   `<div class="container">
-                    <table class="table table-striped table-light align-center">
+                    <table class="table table-striped table-light text-center">
                         <thead>
                             <tr>
                                 <th>Title</th>
