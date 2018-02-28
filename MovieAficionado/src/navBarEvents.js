@@ -26,12 +26,16 @@ $(document).ready(function(){
 
 
     $("#cinemas-a").click(function(){
+
         $("#main-container").html("");
+
         $("#home-a").parent().removeClass("active");
         $("#favourite-a").parent().removeClass("active");
         $("#newest-a").parent().removeClass("active");
         
         $(this).parent().addClass("active");
+        var html = cinemaLayoutProvider().html;
+        $("#main-container").html(html);
     });
 
 
