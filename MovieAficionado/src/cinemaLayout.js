@@ -1,4 +1,4 @@
-var cinemaLayoutProvider = function () {
+var cinemaLayoutProvider = (function () {
     return {
         html: `<div id ="cinemas">
                 <div id="map">
@@ -31,22 +31,22 @@ var cinemaLayoutProvider = function () {
                    </div>
                 </div>`,
     }
-}
+}());
 
-var mapLayoutMladost = function () {
+var mapLayoutMladost = (function () {
     return {
         html: '<iframe width="400" height="400" frameborder="0" style="border:1" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdGekSAiTcNIrNGwC282jGgajbs0dbSzw&q=Kino+Arena+IMAX+Mladost" allowfullscreen></iframe>'
     }
-}
+}());
 
-var mapLayoutZapad = function () {
+var mapLayoutZapad = (function () {
     return {
         html: '<iframe width="400" height="400" frameborder="0" style="border:1" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdGekSAiTcNIrNGwC282jGgajbs0dbSzw&q=Arena+Sofia+West" allowfullscreen></iframe>'
     }
-}
+}());
 
-var mapLayoutIMAX = function () {
+var mapLayoutIMAX = (function () {
     return {
         html: '<iframe width="400" height="400" frameborder="0" style="border:1" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdGekSAiTcNIrNGwC282jGgajbs0dbSzw&q=Cinema+City+IMAX" allowfullscreen></iframe>'
     }
-}
+}());

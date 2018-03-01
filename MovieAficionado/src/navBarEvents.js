@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#main-container").html(homeLayoutProvider().html);
+    $("#main-container").html(homeLayoutProvider.html);
     
     $("#newest-a").click(function(){
         $("#home-a").parent().removeClass("active");
@@ -17,7 +17,6 @@ $(document).ready(function(){
         $("#cinemas-a").parent().removeClass("active");
         $(this).parent().addClass("active");        
 
-        console.log(1);
         var html = favouriteMoviesLayoutProvider().html;
         $("#main-container").html(html);
         
@@ -34,14 +33,14 @@ $(document).ready(function(){
         $("#newest-a").parent().removeClass("active");
         
         $(this).parent().addClass("active");
-        var html = cinemaLayoutProvider().html;
+        var html = cinemaLayoutProvider.html;
         $("#main-container").html(html);
     });
 
 
 
     $("#home-a").click(function(){
-        var html = homeLayoutProvider().html;
+        var html = homeLayoutProvider.html;
         $("#main-container").html(html);
         $("#newest-a").parent().removeClass("active");
         $("#favourite-a").parent().removeClass("active");
@@ -53,7 +52,7 @@ $(document).ready(function(){
 
 
     $("#search-btn").click(function(){
-        var html = searchBarLayoutProvider().html;
+        var html = searchBarLayoutProvider.html;
         $("#main-container").html(html);
         $("#newest-a").parent().removeClass("active");
         $("#favourite-a").parent().removeClass("active");
@@ -62,17 +61,17 @@ $(document).ready(function(){
     })
 
     $("#newest-m").click(function(){
-        var html = carouselLayoutProvider(`movies`).html;
+        var html = carouselLayoutProvider.html(posterDataBase.movies);
         $("#main-container").html(html);
     });
 
     $("#newest-g").click(function(){
-        var html = carouselLayoutProvider(`games`).html;
+        var html = carouselLayoutProvider.html(posterDataBase.games);
         $("#main-container").html(html);
     });
 
     $("#newest-s").click(function(){
-        var html = carouselLayoutProvider(`series`).html;
+        var html = carouselLayoutProvider.html(posterDataBase.series);
         $("#main-container").html(html);
     });
 });

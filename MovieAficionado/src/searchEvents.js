@@ -14,7 +14,7 @@ var searchFunction = function (data) {
                 //console.log(movieId);
 
                 $.get(newUrl, function (movie) {
-                    $("#results").append(movieLayoutProvider(movie, movieId).html());
+                    $("#results").append(movieLayoutProvider.html(movie));
                 });
             }
 

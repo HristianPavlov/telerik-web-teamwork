@@ -1,4 +1,4 @@
-var homeLayoutProvider = function(){
+var homeLayoutProvider = (function(){
     return {
         html:  `<h1>MovieAficionado</h1>
                 <p>
@@ -6,4 +6,4 @@ var homeLayoutProvider = function(){
                     information about your favorite<br> Movies, TV Shows, Games and more.
                 </p>`
     }
-}
+}());

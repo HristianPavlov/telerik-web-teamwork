@@ -1,4 +1,4 @@
-var posterDataBase = function () {
+var posterDataBase = (function () {
     return {
 
         movies: [                      
@@ -76,7 +76,7 @@ var posterDataBase = function () {
 
         ]
     }
-}
+}());
 
 var favouritesDatabase = (function (){
     var favourites = {

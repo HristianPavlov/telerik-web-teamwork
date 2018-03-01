@@ -1,4 +1,5 @@
 var favouriteMoviesLayoutProvider = function () {
+    favourites = favouritesDatabase.favourites;
     var moviesTableLayoutProvider = function (movie, movieId) {
         return {
             html: `<tr>
@@ -11,8 +12,7 @@ var favouriteMoviesLayoutProvider = function () {
                     </tr>`
         };
     };
-    
-    var favourites = favouritesDatabase.favourites;
+
     var moviesTableLayout = Object.keys(favourites)
         .map(key => moviesTableLayoutProvider(favourites[key], key).html);
     var resultHtml = moviesTableLayout.join("");

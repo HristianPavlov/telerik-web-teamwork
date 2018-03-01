@@ -1,4 +1,4 @@
-var searchBarLayoutProvider = function() {
+var searchBarLayoutProvider = (function() {
     return {
         html : `<div class="row">
                     <div class="col-md-8 offset-2">
@@ -13,4 +13,4 @@ var searchBarLayoutProvider = function() {
                 <br>
                 <div id="results" class="container"></div>`
     }
-}
+}());
