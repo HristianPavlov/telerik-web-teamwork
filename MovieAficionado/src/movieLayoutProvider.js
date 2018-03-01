@@ -2,7 +2,7 @@ var movieLayoutProvider = function (movie, movieId) {
     var poster = movie.Poster;
 
     if (poster == "N/A") {
-        poster = "http://www.daleng.ca/wp-content/themes/graduate-pro/assets/uploads/no-featured-image-400x600.jpg"
+        poster = "https://pbs.twimg.com/profile_images/600060188872155136/st4Sp6Aw.jpg";
     }
 
     var favourites = favouritesDatabase.favourites;
