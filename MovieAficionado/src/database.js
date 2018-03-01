@@ -81,12 +81,12 @@ var posterDataBase = function () {
 var favouritesDatabase = (function (){
     var favourites = {
         "sdasda" :{
-            Title: "Fucking",
+            Title: "SomeMovie",
             Year: "1999",
             Genre: "Action"
         },
         "dsadas" :{
-            Title: "Fucking v2",
+            Title: "SomeMovie v2",
             Year: "2001",
             Genre: "Drama"
         }
