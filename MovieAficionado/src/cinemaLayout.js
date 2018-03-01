@@ -1,6 +1,6 @@
-var cinemaLayoutProvider = function(){
+var cinemaLayoutProvider = function () {
     return {
-        html:  `<div id ="cinemas">
+        html: `<div id ="cinemas">
                 <div id="map">
                    <iframe
                        width="400"
@@ -23,30 +23,30 @@ var cinemaLayoutProvider = function(){
                        <p>Телефон: 0893457176</p>
                    </div>
                    <div id="imax">
-                       <img src="https://cache2.24chasa.bg/Images/Cache/586/Image_1169586_126.jpg">
+                         <img src="https://cache2.24chasa.bg/Images/Cache/586/Image_1169586_126.jpg">
                        <h3>Cinemacity Imax</h3>
                        <p>гр. София, улица „Александър Стамболийски“ 101</p>
                        <p>Телефон: 029292929</p>
                    </div>
                    </div>
-                </div>`
+                </div>`,
     }
 }
 
-var mapLayoutMladost = function(){
-    return{
-        html : '<iframe width="400" height="400" frameborder="0" style="border:1" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdGekSAiTcNIrNGwC282jGgajbs0dbSzw&q=Kino+Arena+IMAX+Mladost" allowfullscreen></iframe>'
+var mapLayoutMladost = function () {
+    return {
+        html: '<iframe width="400" height="400" frameborder="0" style="border:1" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdGekSAiTcNIrNGwC282jGgajbs0dbSzw&q=Kino+Arena+IMAX+Mladost" allowfullscreen></iframe>'
     }
 }
 
-var mapLayoutZapad = function(){
-    return{
+var mapLayoutZapad = function () {
+    return {
         html: '<iframe width="400" height="400" frameborder="0" style="border:1" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdGekSAiTcNIrNGwC282jGgajbs0dbSzw&q=Arena+Sofia+West" allowfullscreen></iframe>'
     }
 }
 
-var mapLayoutIMAX = function(){
-    return{
+var mapLayoutIMAX = function () {
+    return {
         html: '<iframe width="400" height="400" frameborder="0" style="border:1" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdGekSAiTcNIrNGwC282jGgajbs0dbSzw&q=Cinema+City+IMAX" allowfullscreen></iframe>'
     }
 }

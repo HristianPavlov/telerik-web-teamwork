@@ -1,17 +1,17 @@
 var carouselLayoutProvider = function (info) {
-    if(info===`movies`){
+    if(info=== "movies"){
     var img1 = posterDataBase().movies[0].url;
     var img2 = posterDataBase().movies[1].url;
     var img3 = posterDataBase().movies[2].url;
     var img4 = posterDataBase().movies[3].url;
     }
-    else if(info===`games`){  
+    else if(info=== "games"){  
      img1 = posterDataBase().games[0].url;
      img2 = posterDataBase().games[1].url;
      img3 = posterDataBase().games[2].url;
      img4 = posterDataBase().games[3].url;
     }
-    else if(info===`series`){
+    else if(info=== "series"){
      img1 = posterDataBase().series[0].url;
      img2 = posterDataBase().series[1].url;
      img3 = posterDataBase().series[2].url;

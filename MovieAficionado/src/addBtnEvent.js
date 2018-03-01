@@ -1,6 +1,6 @@
 $(document).on("click", ".add-btn", function () {
-    var favourites = favouritesDatabase.favourites;;;;;;
-    var id = $(this).attr('id').split("-")[0];
+    var favourites = favouritesDatabase.favourites;
+    var id = $(this).attr("id").split("-")[0];
 
     var buttonColorToRemove = "btn-outline-success";
     var buttonColorToAdd = "btn-outline-danger";
